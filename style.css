@@ -1,0 +1,150 @@
+body {
+    font-family: monospace;
+    background-color: #111;
+    color: #0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #0f0;
+    text-align: center;
+}
+
+#game-mode-selection button {
+    background-color: #333;
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#game-mode-selection button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#message-area {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #0f0;
+    min-height: 2em;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.game-area {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.player-area {
+    border: 1px solid #0a0;
+    padding: 15px;
+    margin: 10px;
+    background-color: #222;
+}
+
+.player-area.active-player {
+    border: 2px solid #0f0;
+    box-shadow: 0 0 10px #0f0;
+}
+
+.board-container {
+    margin-bottom: 15px;
+}
+
+.game-board {
+    display: grid;
+    grid-gap: 1px;
+    border: 1px solid #0a0;
+    width: 300px;
+    height: 300px;
+    background-color: #050;
+}
+
+.cell {
+    background-color: #1a1a1a;
+    color: #0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    border: 1px solid #030;
+}
+
+.cell.clickable {
+    cursor: crosshair;
+}
+
+.cell.clickable:hover {
+    background-color: #333;
+}
+
+.cell.ship {
+    background-color: #080;
+}
+
+.cell.miss {
+    background-color: #444;
+    color: #aaa;
+}
+
+.cell.hit {
+    background-color: #f00;
+    color: #fff;
+}
+
+.ship-display {
+    margin-top: 10px;
+    border-top: 1px solid #0a0;
+    padding-top: 10px;
+}
+
+.ship-status {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.ship-status span {
+    min-width: 100px;
+    display: inline-block;
+}
+
+.ship-segments {
+    display: flex;
+}
+
+.segment {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #0f0;
+    margin-right: 2px;
+    background-color: #0a0;
+}
+
+.segment.hit {
+    background-color: #f80;
+}
+
+.segment.sunk {
+    background-color: #f00;
+}
+
+.ship-status.sunk {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}

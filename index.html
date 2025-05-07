@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>BATTLESHIP</h1>
+
+    <div id="game-mode-selection">
+        <button id="vs-computer">Human vs Computer</button>
+        <button id="vs-player" disabled>Player vs Player (WIP)</button>
+    </div>
+
+    <div id="message-area">Loading...</div>
+
+    <div class="game-area">
+        <div id="player1-area" class="player-area">
+            <h2 id="player1-name">Player 1</h2>
+            <div class="board-container">
+                <div id="player1-board" class="game-board"></div>
+            </div>
+            <div id="player1-ships" class="ship-display"></div>
+        </div>
+
+        <div id="player2-area" class="player-area">
+            <h2 id="player2-name">Computer</h2>
+             <div class="board-container">
+                <div id="player2-board" class="game-board"></div>
+             </div>
+            <div id="player2-ships" class="ship-display"></div>
+        </div>
+    </div>
+
+    <div id="ship-placement" style="display: none;">
+        <h3>Place Your Ships</h3>
+        </div>
+
+
+    <script type="module" src="src/index.js"></script>
+</body>
+</html>
